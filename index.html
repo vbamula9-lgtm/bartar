@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARTER VERSE — Peer-to-Peer Value Exchange</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Cinzel:wght@600;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #050508;
+            --teal: #00f2fe;
+            --amber: #ff9900;
+            --card-bg: rgba(18, 18, 28, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-glow: 0 0 20px rgba(0, 242, 254, 0.5);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #f0f0f5;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .ambient-light {
+            position: fixed;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, rgba(255, 153, 0, 0.05) 50%, transparent 70%);
+            top: -20vw;
+            left: 20vw;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 24px 6vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            color: #fff;
+            background: linear-gradient(135deg, #fff, var(--teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a0a0b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--teal), #4facfe);
+            color: #000;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.7);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 220vh;
+            padding-top: 120px;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display
